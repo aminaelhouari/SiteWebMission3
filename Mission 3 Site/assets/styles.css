@@ -1,0 +1,154 @@
+
+/*Police dans la DA qu'on a choisi*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap'); 
+
+/*le code couleur a respecter qu'il y a dans le figma*/
+:root{ 
+    --lightcolor: #F8F6F2;
+    --lightcolorhover: #e6e1d9;
+    --darkcolor: #2A402E;
+    --darkcolorhover: #43684a;
+}
+/*Les paramètres que j'ai mis au body et l'ensemble du site pour un aligement correct*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    line-height: 1.6;
+    color: var(--darkcolor);
+    background-color: var(--lightcolor);
+    min-height: 100vh;
+    flex: 1;
+}
+
+/*style css pour le header*/
+
+header {
+    background-color: var(--darkcolor);
+    color: var(--lightcolor);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: var(--lightcolor);
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 60px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+label, #toggle {
+
+display: none;
+
+}
+/*responsive navbar*/
+@media (max-width: 992px) {
+    label{
+        display: block;
+        font-size: 40px;
+        color: var(--lightcolor);
+    }
+    .menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align:  center;
+    }
+   #toggle:checked + .menu{
+        display: flex;
+        
+   }
+}
+
+/*style css pour le main*/
+main {
+    padding: 10px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+main section {
+    margin-bottom: 1rem;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stylebouton{
+    margin: 32px;
+    padding: 5px 80px;
+    cursor: pointer;
+    background-color: var(--lightcolor);
+    color: var(--darkcolor);
+    border: 1px solid var(--darkcolor);
+    border-radius: 30px;
+    box-shadow: -4px 4px var(--darkcolor);
+    font-weight: 700;
+}
+.stylebouton:hover{
+    margin: 32px;
+    padding: 5px 80px;
+    cursor: pointer;
+    background-color: var(--lightcolorhover);
+    color: var(--darkcolor);
+    border: 1px solid var(--darkcolor);
+    border-radius: 30px;
+    box-shadow: -4px 4px var(--darkcolor);
+    
+}
+
+/*style css pour le footer*/
+footer {
+    background-color: var(--darkcolor);
+    color: var(--lightcolor);
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    bottom: auto;
+    margin-top: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px -2px 5px -1px, rgba(0, 0, 0, 0.3) 0px -1px 3px -1px;
+}
